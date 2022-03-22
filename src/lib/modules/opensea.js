@@ -30,7 +30,7 @@ export async function getUserCollections(owner, page, perPage) {
 	return new Promise((resolve, reject) => {
 		queue.add(async () => {
 			const url = new URL(PREFIX + 'collections');
-			url.searchParams.set('offset', (page - 1) * perPage);
+			//url.searchParams.set('offset', (page - 1) * perPage);
 			url.searchParams.set('limit', perPage);
 			url.searchParams.set('asset_owner', owner.toLowerCase());
 
@@ -43,7 +43,7 @@ export async function getUserAssetsFromCollection(owner, collection, page, perPa
 	return new Promise((resolve, reject) => {
 		queue.add(async () => {
 			const url = new URL(PREFIX + 'assets');
-			url.searchParams.set('offset', (page - 1) * perPage);
+			//url.searchParams.set('offset', (page - 1) * perPage);
 			url.searchParams.set('limit', perPage);
 			url.searchParams.set('collection', collection);
 			url.searchParams.set('owner', owner.toLowerCase())

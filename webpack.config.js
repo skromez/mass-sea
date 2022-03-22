@@ -23,6 +23,7 @@ export default {
 		extensions: ['.ts', '.js'],
 		fallback: {
 			'crypto-browserify': require.resolve('crypto-browserify'),
+"fs": false
 		},
 	},
 	module: {},
