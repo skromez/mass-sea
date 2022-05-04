@@ -6,7 +6,7 @@ const require = createRequire(import.meta.url);
 const __dirname = new URL('.', import.meta.url).pathname;
 
 export default {
-	mode: 'production',
+	mode: 'development',
 	entry: {
 		SeaPort: './webpack/seaport.ts',
 	},
@@ -18,6 +18,7 @@ export default {
 		libraryExport: 'default',
 		umdNamedDefine: true,
 	},
+    devtool: false,
 	plugins: [new NodePolyfillPlugin()],
 	resolve: {
 		extensions: ['.ts', '.js'],
